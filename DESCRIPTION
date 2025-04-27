@@ -1,0 +1,57 @@
+Package: climate4R
+Title: A Framework for Climate Data Management, Analysis, and Downscaling
+Version: 2.6.2
+Authors@R: person(given = "Santander Meteorology Group", family = "", role = c("aut", "cre"), 
+                  email = "meteo@ifca.es", comment = "Institutional author")
+Description: Climate4R provides a modular framework for the management, analysis, downscaling, and visualization of climate datasets, 
+             integrating multiple specialized R packages based on NetCDF data formats.
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Depends:
+    R (>= 3.6)
+Imports:
+    loadeR               (== 1.8.1),
+    transformeR          (== 2.2.2),
+    downscaleR           (== 3.3.4),
+    visualizeR           (== 1.6.4),
+    loadeR.java          (== 1.1.1),
+    loadeR.2nc           (== 0.1.3),
+    converter            (== 0.2.1),
+    climate4R.udg        (== 0.2.6),
+    loader.ecoms         (== 1.4.8),
+    downscaleR.keras     (== 1.1.1),
+    geoprocessor         (== 0.2.2),
+    climate4R.climdex    (== 0.2.3),
+    climate4R.indices    (== 0.3.1),
+    firedanger           (== 1.1.0),
+    VALUE                (== 2.2.4),
+    climate4R.value      (== 1.0.2),
+    mopa                 (== 1.1.2),
+    drought4R            (== 0.3.1),
+    climate4R.datasets   (== 0.0.1),
+    c4r.calibrator       (== 0.2.0),
+    climate4R.hub        (== 0.0.1)
+Remotes:
+    SantanderMetGroup/loadeR@v1.8.1,
+    SantanderMetGroup/transformeR@v2.2.2,
+    SantanderMetGroup/downscaleR@v3.3.4,
+    SantanderMetGroup/visualizeR@v1.6.4,
+    SantanderMetGroup/loadeR.java@v1.1.1,
+    SantanderMetGroup/loadeR.2nc@v0.1.3,
+    SantanderMetGroup/converter@v0.2.1,
+    SantanderMetGroup/climate4R.udg@v0.2.6,
+    SantanderMetGroup/loader.ecoms@v1.4.8,
+    SantanderMetGroup/downscaleR.keras@v1.1.1,
+    SantanderMetGroup/geoprocessor@v0.2.2,
+    SantanderMetGroup/climate4R.climdex@v0.2.3,
+    SantanderMetGroup/climate4R.indices@v0.3.1,
+    SantanderMetGroup/firedanger@v1.1.0,
+    SantanderMetGroup/VALUE@v2.2.4,
+    SantanderMetGroup/climate4R.value@v1.0.2,
+    SantanderMetGroup/mopa@v1.1.2,
+    SantanderMetGroup/drought4R@v0.3.1,
+    SantanderMetGroup/climate4R.datasets@v0.0.1,
+    SantanderMetGroup/c4r.calibrator@v0.2.0,
+    SantanderMetGroup/climate4R.hub@v0.0.1
+RoxygenNote: 7.2.3
