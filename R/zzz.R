@@ -1,4 +1,7 @@
 # R/zzz.R
+#' @importFrom utils packageVersion
+
+if (getRversion() >= "2.15.1") utils::globalVariables(".parse_imports_versions")
 
 # Helper function to parse the Imports field from DESCRIPTION
 .parse_imports_versions_full <- function() {

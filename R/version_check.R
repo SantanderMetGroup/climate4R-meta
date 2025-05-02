@@ -49,6 +49,8 @@ climate4R_check_versions <- function() {
   
   if (all_ok) {
     message("Climate4R version check passed: all packages meet their version requirements.")
+  } else {
+    message("Climate4R version check FAILED: some packages do not meet version requirements. See warnings above.")
   }
   
   invisible(all_ok)

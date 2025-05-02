@@ -16,7 +16,7 @@ devtools::install_github("SantanderMetGroup/climate4R")
 
 This will:
 - Download Climate4R.
-- Install the required component packages (`loadeR`, `transformeR`, `downscaleR`, `visualizeR`) in specific versions defined by the developers.
+- Install the required component packages (`loadeR`, `transformeR`, `downscaleR`, `visualizeR`, etc.) in specific versions defined by the developers.
 - Install these components directly from GitHub, not from CRAN, based on the exact validated tags (e.g., `v1.3.2`, `v1.1.1`, etc.).
 
 > **Important**: Use `devtools::install_github()` or `remotes::install_github()`, because `install.packages()` does not support GitHub sources.
@@ -71,7 +71,7 @@ During loading (`library(climate4R)`):
 
 ## Warning About Development Versions
 
-If you manually install a *development* version of any component (e.g., `loadeR@development`), it may cause compatibility issues.
+If you manually install a *development* version of any component (e.g., `loadeR@devel`), it may cause compatibility issues.
 
 Climate4R does not prevent using them but issues a warning upon loading.
 
