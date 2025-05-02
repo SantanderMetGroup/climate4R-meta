@@ -1,7 +1,7 @@
 Package: climate4R
 Title: A Framework for Climate Data Management, Analysis, and Downscaling
 Version: 2.6.2
-Authors@R: person(given = "Santander Meteorology Group", family = "", role = c("aut", "cre"), 
+Authors@R: person(given = "Santander Meteorology Group", role = c("aut", "cre"), 
                   email = "meteo@ifca.es", comment = "Institutional author")
 Description: Climate4R provides a modular framework for the management, analysis, downscaling, and visualization of climate datasets, 
              integrating multiple specialized R packages based on NetCDF data formats.
@@ -32,7 +32,8 @@ Imports:
     drought4R            (== 0.3.1),
     climate4R.datasets   (== 0.0.1),
     calibratoR           (== 0.2.0),
-    climate4R.hub        (== 0.0.1)
+    climate4R.hub        (== 0.0.1),
+    utils
 Remotes:
     SantanderMetGroup/loadeR@v1.8.1,
     SantanderMetGroup/transformeR@v2.2.2,
