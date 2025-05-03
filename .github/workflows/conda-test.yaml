@@ -24,8 +24,9 @@ jobs:
       - name: Set up Miniconda
         uses: conda-incubator/setup-miniconda@v3
         with:
+          miniforge-version: latest
           channels: conda-forge
-
+          conda-remove-defaults: "true"
       - name: Create Conda environment with R ${{ matrix.r-version }}
         run: |
           conda create -y -n testenv r-base=${{ matrix.r-version }} r-devtools r-remotes r-testthat r-climate4r
