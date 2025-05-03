@@ -27,7 +27,7 @@ jobs:
 
       - name: Create Conda environment with R ${{ matrix.r-version }}
         run: |
-          conda create -y -n testenv r-base=${{ matrix.r-version }} r-devtools r-remotes r-testthat r-climate4R
+          conda create -y -n testenv r-base=${{ matrix.r-version }} r-devtools r-remotes r-testthat r-climate4r
           conda activate testenv
           Rscript -e 'devtools::install_github(".")'
 
