@@ -1,0 +1,38 @@
+name: climate4R-conda-test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test-climate4R:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        r-version: [3.6, 4.0, 4.1, 4.2, 4.3, 4.4]
+
+    name: R ${{ matrix.r-version }} - conda test
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Miniconda
+        uses: conda-incubator/setup-miniconda@v2
+        with:
+          miniforge-variant: Mambaforge
+          channels: conda-forge
+
+      - name: Create Conda environment with R ${{ matrix.r-version }}
+        run: |
+          conda create -y -n testenv r-base=${{ matrix.r-version }} r-devtools r-remotes r-testthat
+          source activate testenv
+          Rscript -e 'devtools::install_github("SantanderMetGroup/climate4R")'
+
+      - name: Run devtools::test()
+        run: |
+          source activate testenv
+          Rscript -e 'devtools::test()'
