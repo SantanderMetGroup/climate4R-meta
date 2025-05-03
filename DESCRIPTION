@@ -33,7 +33,6 @@ Imports:
     climate4R.datasets   (== 0.0.1),
     calibratoR           (== 0.2.0),
     climate4R.hub        (== 0.0.1),
-    utils
 Remotes:
     SantanderMetGroup/loadeR@v1.8.1,
     SantanderMetGroup/transformeR@v2.2.2,
