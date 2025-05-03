@@ -3,7 +3,8 @@
 if (getRversion() >= "2.15.1") utils::globalVariables(".parse_imports_versions")
 
 .onAttach <- function(libname, pkgname) {
-  packageStartupMessage("Loading Climate4R metapackage...")
+  climate4R_version <- as.character(utils::packageVersion("climate4R"))
+  packageStartupMessage(sprintf("Loading Climate4R metapackage (version %s)...", climate4R_version))
   required_versions <- .parse_imports_versions_full()
   for (pkg in names(required_versions)) {
     .check_package_version(pkg, required_versions[[pkg]])
@@ -56,7 +57,7 @@ if (getRversion() >= "2.15.1") utils::globalVariables(".parse_imports_versions")
     matches <- regmatches(entry, regexec("^([^/@]+)/([^@]+)@(.+)$", entry))[[1]]
     if (length(matches) >= 4) {
       repo_name <- matches[3]
-      tag_version <- matches[4]
+      tag_version <- gsub("^v", "", matches[4]) # Remove 'v' prefix if present
       remotes_versions[[repo_name]] <- tag_version
     }
   }

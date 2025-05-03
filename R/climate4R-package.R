@@ -10,7 +10,7 @@
 
 #' Check consistency between Imports and Remotes
 #' @export
-climate4R_check_remotes_consistency <- function() {
+check_remotes_versions <- function() {
   imports_versions_full <- .parse_imports_versions_full()
   remotes_versions <- .parse_remotes_versions()
   all_ok <- TRUE
@@ -33,7 +33,7 @@ climate4R_check_remotes_consistency <- function() {
 
 #' Check installed versions against DESCRIPTION
 #' @export
-climate4R_check_versions <- function() {
+check_installed_versions <- function() {
   required_versions <- .parse_imports_versions_full()
   all_ok <- TRUE
   for (pkg in names(required_versions)) {
@@ -49,7 +49,7 @@ climate4R_check_versions <- function() {
 
 #' Report installed component versions
 #' @export
-climate4R_session_info <- function() {
+show_installed_versions <- function() {
   required_versions <- .parse_imports_versions_full()
   installed_info <- sapply(names(required_versions), function(pkg) {
     if (requireNamespace(pkg, quietly = TRUE)) {
@@ -70,14 +70,14 @@ climate4R_session_info <- function() {
 
 #' Full diagnostic report
 #' @export
-climate4R_report <- function() {
+report_versions <- function() {
   cat("\n=== Climate4R Full Diagnostic Report ===\n\n")
   cat("1. Checking Installed Versions...\n")
-  versions_ok <- climate4R_check_versions()
+  versions_ok <- check_installed_versions()
   cat("\n2. Checking Imports vs Remotes...\n")
-  remotes_ok <- climate4R_check_remotes_consistency()
+  remotes_ok <- check_remotes_versions()
   cat("\n3. Listing Installed Components...\n")
-  climate4R_session_info()
+  show_installed_versions()
   cat("\n=== End of Report ===\n")
   invisible(versions_ok && remotes_ok)
 }
