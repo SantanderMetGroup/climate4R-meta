@@ -42,3 +42,7 @@ vignettes/*.pdf
 # Misc
 .DS_Store
 Thumbs.db
+
+# other
+renv.lock
+environment.yaml
