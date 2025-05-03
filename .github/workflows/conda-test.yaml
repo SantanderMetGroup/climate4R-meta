@@ -12,7 +12,7 @@ jobs:
 
     strategy:
       matrix:
-        r-version: [3.6, 4.0, 4.1, 4.2, 4.3, 4.4]
+        r-version: ["3.6", "4.0", "4.1", "4.2", "4.3", "4.4"]
 
     name: R ${{ matrix.r-version }} - conda test
 
@@ -27,11 +27,11 @@ jobs:
 
       - name: Create Conda environment with R ${{ matrix.r-version }}
         run: |
-          conda create -y -n testenv r-base=${{ matrix.r-version }} r-devtools r-remotes r-testthat
-          source activate testenv
-          Rscript -e 'devtools::install_github("SantanderMetGroup/climate4R")'
+          conda create -y -n testenv r-base=${{ matrix.r-version }} r-devtools r-remotes r-testthat r-climate4R
+          conda activate testenv
+          Rscript -e 'devtools::install_github(".")'
 
       - name: Run devtools::test()
         run: |
-          source activate testenv
+          conda activate testenv
           Rscript -e 'devtools::test()'
