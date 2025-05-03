@@ -4,7 +4,7 @@
 **Climate4R** is an R metapackage designed to bundle and install all core components of the Climate4R ecosystem in one step.  
 Its goal is to provide a reproducible, scalable, and modular framework for climate data management, analysis, downscaling, and visualization, especially for NetCDF datasets.
 
-## 📦 Installation
+## Installation
 
 We strongly recommend installing Climate4R through the **conda-forge** channel:
 
@@ -24,9 +24,8 @@ This will create a new environment named `climate4r_env` with all necessary R pa
 
 > **Note:** Climate4R itself does not provide user-facing functions—it exists solely to install and pin the versions of all Climate4R component packages.
 
----
 
-## ✅ Included Packages (Climate4R 2.6.2)
+## Included Packages (Climate4R 2.6.2)
 
 | Package              | Version | Description                                          |
 |:---------------------|:--------|:---------------------------------------------------|
@@ -52,21 +51,7 @@ This will create a new environment named `climate4r_env` with all necessary R pa
 | calibratoR        | 0.2.0   | Calibration tools for climate models              |
 | climate4R.hub     | 0.0.1   | Experimental hub interface                        |
 
----
-
-## 🔍 Diagnostics
-
-```r
-library(climate4R)
-climate4R_check_versions()             # Check installed versions
-climate4R_check_remotes_consistency() # Check Imports vs Remotes
-climate4R_session_info()              # Show installed/required versions
-climate4R_report()                    # Full diagnostic report
-```
-
----
-
-## 🧪 Testing
+## Diagnostics and Testing
 
 Below is an example of expected test output to give users confidence:
 
@@ -117,7 +102,7 @@ devtools::test()
 
 ---
 
-## ⚠️ Best Practices
+## Best Practices
 
 - Use the validated versions provided in the metapackage.
 - Avoid mixing development versions (`@devel`) unless necessary.
@@ -125,20 +110,21 @@ devtools::test()
 
 ---
 
-### Alternative Installation (GitHub)
+## Alternative Installation (GitHub)
+
+Using `devtools`:
 
 ```r
-install.packages("remotes")
-remotes::install_github("SantanderMetGroup/climate4R")
+devtools::install_github("SantanderMetGroup/climate4R")
 ```
 
 > **Note:** Recommended mainly for development and testing.
 
-## 📜 License
+## License
 
 Climate4R is licensed under **GNU General Public License v3.0 (GPL-3)**.
 
-## 📚 References
+## References
 
 - [Climate4R GitHub](https://github.com/SantanderMetGroup/climate4R)
 - [NetCDF-Java](https://www.unidata.ucar.edu/software/netcdf-java/)
