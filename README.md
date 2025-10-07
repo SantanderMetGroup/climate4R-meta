@@ -1,5 +1,5 @@
 # Climate4R 
-![Version](https://img.shields.io/badge/version-2.6.2-blue) ![Conda](https://img.shields.io/conda/vn/conda-forge/r-climate4r) ![GitHub release](https://img.shields.io/github/v/release/SantanderMetGroup/climate4R-meta) ![License](https://img.shields.io/badge/license-GPL--3-blue)
+![GitHub release](https://img.shields.io/github/v/release/SantanderMetGroup/climate4R-meta) ![Conda](https://img.shields.io/conda/vn/conda-forge/r-climate4r) ![License](https://img.shields.io/badge/license-GPL--3-blue)
 
 **Climate4R** is an R metapackage designed to bundle and install all core components of the Climate4R ecosystem in one step.  
 Its goal is to provide a reproducible, scalable, and modular framework for climate data management, analysis, downscaling, and visualization, especially for NetCDF datasets.
@@ -126,7 +126,7 @@ Climate4R is licensed under **GNU General Public License v3.0 (GPL-3)**.
 
 ## References
 
-- [Climate4R GitHub](https://github.com/SantanderMetGroup/climate4R)
+- [Climate4R Framework](https://github.com/SantanderMetGroup/climate4R)
 - [NetCDF-Java](https://www.unidata.ucar.edu/software/netcdf-java/)
 - [R Project](https://www.r-project.org/)
 - [Publication: Climate4R Framework Paper](https://doi.org/10.1002/joc.5280)
