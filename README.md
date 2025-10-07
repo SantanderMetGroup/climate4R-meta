@@ -1,5 +1,5 @@
 # Climate4R 
-![Version](https://img.shields.io/badge/version-2.6.2-blue) ![Conda](https://img.shields.io/conda/vn/conda-forge/r-climate4r) ![GitHub release](https://img.shields.io/github/v/release/SantanderMetGroup/climate4R) ![License](https://img.shields.io/badge/license-GPL--3-blue)
+![Version](https://img.shields.io/badge/version-2.6.2-blue) ![Conda](https://img.shields.io/conda/vn/conda-forge/r-climate4r) ![GitHub release](https://img.shields.io/github/v/release/SantanderMetGroup/climate4R-meta) ![License](https://img.shields.io/badge/license-GPL--3-blue)
 
 **Climate4R** is an R metapackage designed to bundle and install all core components of the Climate4R ecosystem in one step.  
 Its goal is to provide a reproducible, scalable, and modular framework for climate data management, analysis, downscaling, and visualization, especially for NetCDF datasets.
@@ -115,7 +115,7 @@ devtools::test()
 Using `devtools`:
 
 ```r
-devtools::install_github("SantanderMetGroup/climate4R")
+devtools::install_github("SantanderMetGroup/climate4R-meta")
 ```
 
 > **Note:** Recommended mainly for development and testing.
