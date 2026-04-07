@@ -25,7 +25,7 @@ This will create a new environment named `climate4r_env` with all necessary R pa
 > **Note:** Climate4R itself does not provide user-facing functions—it exists solely to install and pin the versions of all Climate4R component packages.
 
 
-## Included Packages (Climate4R 2.7.3)
+## Included Packages (Climate4R 2.7.4)
 
 | Package              | Version | Description                                          |
 |:---------------------|:--------|:---------------------------------------------------|
@@ -33,7 +33,7 @@ This will create a new environment named `climate4r_env` with all necessary R pa
 | transformeR         | 2.2.2   | Transform, aggregate, and manipulate climate data   |
 | downscaleR         | 3.3.4   | Statistical downscaling of climate data             |
 | visualizeR         | 1.6.4   | Advanced visualization tools for climate data      |
-| loadeR.java        | 1.2.1   | Java-based NetCDF backend for loadeR               |
+| loadeR.java        | 1.2.2   | Java-based NetCDF backend for loadeR               |
 | loadeR.2nc         | 0.1.3   | Convert loadeR outputs to NetCDF format            |
 | convertR           | 0.2.1   | Unit and scale conversions for climate data        |
 | climate4R.UDG      | 0.2.6   | Interface with the UDG climate data repository     |
@@ -72,7 +72,7 @@ Climate4R Components Version Information:
 - transformeR: Installed 2.2.2 | Required 2.2.2
 - downscaleR: Installed 3.3.4 | Required 3.3.4
 - visualizeR: Installed 1.6.4 | Required 1.6.4
-- loadeR.java: Installed 1.2.1 | Required 1.2.1
+- loadeR.java: Installed 1.2.2 | Required 1.2.2
 - loadeR.2nc: Installed 0.1.3 | Required 0.1.3
 - convertR: Installed 0.2.1 | Required 0.2.1
 - climate4R.UDG: Installed 0.2.6 | Required 0.2.6
